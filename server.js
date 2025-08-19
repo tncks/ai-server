@@ -5,7 +5,7 @@ const port = 3000;
 app.use(express.json());
 
 app.get("/api/hello", (req, res) => {
-    res.json({ message: "Hello API Server!" });
+    res.json({ message: "Greatest My Stock backend responser" });
 });
 
 app.post("/api/echo", (req, res) => {
