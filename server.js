@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 let globalResultData = null;
+let globalErrormsg = null;
 
 app.use(express.json());
 
@@ -40,7 +41,10 @@ async function fetchAndInsertStockData() {
     });
 
     try {
+        globalErrormsg = allDataPromises;
+        console.log(globalErrormsg)
         const responses = await Promise.all(allDataPromises);
+        console.log(responses);
         let combinedData = [];
 
         for (const response of responses) {
@@ -73,6 +77,7 @@ async function fetchAndInsertStockData() {
         }
         globalResultData = combinedData;
     } catch (error) {
+        globalErrormsg = error;
         console.error('API 호출 또는 데이터 처리 중 오류 발생:', error);
     }
 }
@@ -83,7 +88,7 @@ app.get("/api/hello", (req, res) => {
     if (globalResultData) {
         res.json(globalResultData);
     } else {
-        res.status(503).json({ message: "데이터를 불러오는 중입니다. 잠시 후 다시 시도해주세요." });
+        res.status(503).json({ message: globalErrormsg });
     }
 });
 
