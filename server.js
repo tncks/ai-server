@@ -31,10 +31,10 @@ async function fetchAndInsertStockData() {
         const params = {
             serviceKey: serviceKey,
             resultType: 'json',
-            beginBasDt: '20250101',
+            beginBasDt: '20220101',
             endBasDt: '20250822',
             likeSrtnCd: code,
-            numOfRows: 120,
+            numOfRows: 1200,
             pageNo: 1
         };
         return axios.get(apiUrl, { params });
