@@ -22,7 +22,8 @@ app.post("/api/echo", (req, res) => {
 const axios = require('axios');
 const serviceKey = 'ILHpBh%2FEi4zp88S4zdGSxnDALfZ76JTiJzofGsEYYiGpXldHO3QV39MxgM8sOjSxhLxHS9AV7XDjgoR3u3DGxw%3D%3D';
 const apiUrl = 'https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo';
-const stockCodes = ['005930', '000660']; // 삼성전자, SK하이닉스
+const stockCodes = ['005930', '000660'];
+
 
 async function fetchAndInsertStockData() {
     const allDataPromises = stockCodes.map(code => {
