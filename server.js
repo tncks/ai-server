@@ -13,8 +13,8 @@ app.post("/api/echo", (req, res) => {
 
 
 /*
-* (step 1) 기업 5개씩 종목 코드에 할당하기 ['005930' , ''] ..  아래 복붙해나가면서 수정, (step 2) git commit push 작업까지
-* (step 3) 크롬 탭 들어가서 /api/hello 접속, 전체 복붙해서 메모장에 붙여넣고  s??.json 이름의 파일 저장하기
+* (final completed step 1) 기업 5개씩 종목 코드에 할당하기 ['005930' , ''] ..  아래 복붙해나가면서 수정, (final completed step 2) git commit push 작업까지
+* (final completed step 3) 크롬 탭 들어가서 /api/hello 접속, 전체 복붙해서 메모장에 붙여넣고  s??.json 이름의 파일 저장하기
 *                                                                                                                   (step 4) Excel columns 15 -> 파워쿼리 -> 전처리(종목코드명전체 <- 이 컬럼제거) -> 14 컬럼으로 맞춰야함
 */
 
@@ -22,7 +22,7 @@ app.post("/api/echo", (req, res) => {
 const axios = require('axios');
 const serviceKey = 'ILHpBh/Ei4zp88S4zdGSxnDALfZ76JTiJzofGsEYYiGpXldHO3QV39MxgM8sOjSxhLxHS9AV7XDjgoR3u3DGxw==';
 const apiUrl = 'https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo';
-const stockCodes = ['214370', '225570', '237690', '247540', '259960']; //9
+const stockCodes = ['263750', '272450', '278280', '293490', '329180']; //10
 /*
 잘라내기 Ctrl + X
 
@@ -41,7 +41,7 @@ const stockCodes = ['214370', '225570', '237690', '247540', '259960']; //9
 
 
 
-['263750', '272450', '278280', '293490', '329180']; //10
+
 * */
 
 
