@@ -22,7 +22,7 @@ app.post("/api/echo", (req, res) => {
 const axios = require('axios');
 const serviceKey = 'ILHpBh/Ei4zp88S4zdGSxnDALfZ76JTiJzofGsEYYiGpXldHO3QV39MxgM8sOjSxhLxHS9AV7XDjgoR3u3DGxw==';
 const apiUrl = 'https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo';
-const stockCodes = ['105560', '112040', '128940', '205470', '207940']; //8
+const stockCodes = ['214370', '225570', '237690', '247540', '259960']; //9
 /*
 잘라내기 Ctrl + X
 
@@ -39,7 +39,7 @@ const stockCodes = ['105560', '112040', '128940', '205470', '207940']; //8
 
 
 
-['214370', '225570', '237690', '247540', '259960']; //9
+
 
 ['263750', '272450', '278280', '293490', '329180']; //10
 * */
