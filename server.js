@@ -14,19 +14,20 @@ app.post("/api/echo", (req, res) => {
 
 /*
 * (step 1) 기업 5개씩 종목 코드에 할당하기 ['005930' , ''] ..  아래 복붙해나가면서 수정, (step 2) git commit push 작업까지
-* (step 3) Excel columns 15 -> 파워쿼리 -> 전처리(종목코드명전체 <- 이 컬럼제거) -> 14 컬럼으로 맞춰야함
+* (step 3) 크롬 탭 들어가서 /api/hello 접속, 전체 복붙해서 메모장에 붙여넣고  s??.json 이름의 파일 저장하기
+*                                                                                                                   (step 4) Excel columns 15 -> 파워쿼리 -> 전처리(종목코드명전체 <- 이 컬럼제거) -> 14 컬럼으로 맞춰야함
 */
 
 // API 정보와 종목 코드 배열
 const axios = require('axios');
 const serviceKey = 'ILHpBh/Ei4zp88S4zdGSxnDALfZ76JTiJzofGsEYYiGpXldHO3QV39MxgM8sOjSxhLxHS9AV7XDjgoR3u3DGxw==';
 const apiUrl = 'https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo';
-const stockCodes = ['005490', '005930', '006400', '009540', '010130']; //2
+const stockCodes = ['010950', '011780', '012330', '015760', '017670']; //3
 /*
 잘라내기 Ctrl + X
 
 
-['010950', '011780', '012330', '015760', '017670']; //3
+
 
 ['023530', '028260', '028300', '032830', '033780']; //4
 
