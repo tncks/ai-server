@@ -23,7 +23,7 @@ app.post("/api/echo", (req, res) => {
 const axios = require('axios');
 const serviceKey = 'ILHpBh/Ei4zp88S4zdGSxnDALfZ76JTiJzofGsEYYiGpXldHO3QV39MxgM8sOjSxhLxHS9AV7XDjgoR3u3DGxw==';
 const apiUrl = 'https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo';
-const stockCodes = ['005930', '000660'];
+const stockCodes = ['005930']; // <-지금은 삼성만           sk는'000660'
 
 
 async function fetchAndInsertStockData() {
@@ -31,8 +31,8 @@ async function fetchAndInsertStockData() {
         const params = {
             serviceKey: serviceKey,
             resultType: 'json',
-            beginBasDt: '20250801',
-            endBasDt: '20250821',
+            beginBasDt: '20250101',
+            endBasDt: '20250822',
             likeSrtnCd: code,
             numOfRows: 60,
             pageNo: 1
