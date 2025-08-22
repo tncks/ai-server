@@ -21,7 +21,7 @@ app.post("/api/echo", (req, res) => {
 
 // API 정보와 종목 코드 배열
 const axios = require('axios');
-const serviceKey = 'ILHpBh%2FEi4zp88S4zdGSxnDALfZ76JTiJzofGsEYYiGpXldHO3QV39MxgM8sOjSxhLxHS9AV7XDjgoR3u3DGxw%3D%3D';
+const serviceKey = 'ILHpBh/Ei4zp88S4zdGSxnDALfZ76JTiJzofGsEYYiGpXldHO3QV39MxgM8sOjSxhLxHS9AV7XDjgoR3u3DGxw==';
 const apiUrl = 'https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo';
 const stockCodes = ['005930', '000660'];
 
