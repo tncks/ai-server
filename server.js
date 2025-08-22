@@ -34,7 +34,7 @@ async function fetchAndInsertStockData() {
             beginBasDt: '20250101',
             endBasDt: '20250822',
             likeSrtnCd: code,
-            numOfRows: 60,
+            numOfRows: 120,
             pageNo: 1
         };
         return axios.get(apiUrl, { params });
